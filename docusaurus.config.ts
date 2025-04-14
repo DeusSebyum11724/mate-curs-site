@@ -1,14 +1,13 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Math Courses',
+  tagline: 'Master Mathematics with Our Comprehensive Courses.',
   favicon: 'img/favicon.ico',
 
+<<<<<<< HEAD
   // Set the production url of your site here
   url: 'https://deussebyum11724.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -21,13 +20,19 @@ const config: Config = {
   projectName: 'mate-curs-site', // Usually your repo name.
   deploymentBranch: 'gh-pages',// ramura pe care se va publica
   trailingSlash: false, 
+=======
+  url: 'https://deussebyum11724.github.io',
+  baseUrl: '/mate-curs-site/',
+
+  organizationName: 'DeusSebyum11724', // GitHub username
+  projectName: 'mate-curs-site', // GitHub repository name
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
+>>>>>>> 22b3e64 (second commit)
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -39,10 +44,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/DeusSebyum11724/mate-curs-site/edit/main/',
         },
         blog: {
           showReadingTime: true,
@@ -50,14 +53,8 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+            'https://github.com/DeusSebyum11724/mate-curs-site/edit/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -67,25 +64,29 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Math Courses',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Math Courses Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'mathSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Courses',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/DeusSebyum11724/mate-curs-site',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          to: '/docs/contact', // Ensure this points to a valid document
+          label: 'Contact',
           position: 'right',
         },
       ],
@@ -94,11 +95,19 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Courses',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Linear Algebra',
+              to: '/docs/linear-algebra',
+            },
+            {
+              label: 'Calculus',
+              to: '/docs/calculus',
+            },
+            {
+              label: 'Probability',
+              to: '/docs/probability',
             },
           ],
         },
@@ -123,17 +132,17 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'GitHub',
+              href: 'https://github.com/DeusSebyum11724/mate-curs-site',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Contact',
+              to: '/docs/contact', // Ensure this points to a valid document
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Math Courses. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
