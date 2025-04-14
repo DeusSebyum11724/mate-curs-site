@@ -19,6 +19,8 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'DeusSebyum11724', // Usually your GitHub org/user name.
   projectName: 'mate-curs-site', // Usually your repo name.
+  deploymentBranch: 'gh-pages',// ramura pe care se va publica
+  trailingSlash: false, 
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
