@@ -1,17 +1,11 @@
 module.exports = {
-  mathSidebar: [
-    {
-      type: 'category',
-      label: 'Mathematics Courses',
-      items: [
-        'intro',
-        'linear-algebra',
-        'calculus',
-        'probability',
-      ],
-    },
+  tutorialSidebar: [
+    'intro',
     'about',
-    'faq',
     'contact',
+    'faq',
+    'calculus',
+    'linear-algebra',
+    'probability',
   ],
 };

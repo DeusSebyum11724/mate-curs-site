@@ -43,7 +43,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
+          sidebarPath: require.resolve('./sidebars.ts'),
           editUrl:
             'https://github.com/DeusSebyum11724/mate-curs-site/edit/main/',
         },
@@ -57,7 +57,7 @@ const config: Config = {
             'https://github.com/DeusSebyum11724/mate-curs-site/edit/main/',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       } satisfies Preset.Options,
     ],
@@ -74,7 +74,7 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'mathSidebar',
+          sidebarId: 'tutorialSidebar', // updated to the available sidebar
           position: 'left',
           label: 'Courses',
         },

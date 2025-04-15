@@ -1,11 +1,21 @@
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+.heroBanner {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: white;
+  text-align: center;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.hero__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.hero__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }

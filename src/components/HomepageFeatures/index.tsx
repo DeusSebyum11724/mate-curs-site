@@ -1,71 +1,22 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import React from 'react';
+import { JSX } from 'react/jsx-runtime';
 
-type FeatureItem = {
-  title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: ReactNode;
-};
-
-const FeatureList: FeatureItem[] = [
-  {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
-
-function Feature({title, Svg, description}: FeatureItem) {
+export default function Home(): JSX.Element {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
+    <main className="min-h-screen bg-white">
+      <section className="text-center py-20 px-4 bg-gradient-to-b from-indigo-100 to-white">
+        <h1 className="text-5xl font-extrabold text-indigo-700">Welcome to ALF!</h1>
+        <p className="text-lg mt-4 text-gray-600">A modern, responsive math learning platform</p>
+      </section>
 
-export default function HomepageFeatures(): ReactNode {
-  return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-      </div>
-    </section>
+      <section className="grid md:grid-cols-3 gap-6 px-8 py-16">
+        {['Practice', 'Lessons', 'Challenges'].map((title, index) => (
+          <div key={index} className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition">
+            <h3 className="text-xl font-semibold text-indigo-600">{title}</h3>
+            <p className="text-gray-500 mt-2">Explore engaging content to build your math skills.</p>
+          </div>
+        ))}
+      </section>
+    </main>
   );
 }
